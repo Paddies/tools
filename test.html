@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>tools-test</title>
+		
+		<script type="module">
+			import tools from  "./tools.js"
+			//console.log("1234127".unique())
+			//alert(tools.typeOf("123"))
+			
+			
+			//tools.Ajax("post","http://192.168.2.2/api/getSystemInfo",{
+			//tools.Ajax("post","http://192.168.2.66:8008/rmcsweb/external/api",{
+				//"rmcs_id":"login",
+				//"server_id":"c91cd2731155b9752c2459e53fb661d4",
+				//"user_name":"admin",
+				//"user_password":"123456"
+			//tools.Ajax("get","http://192.168.2.2/api/login",{
+				//"userName":"admin",
+				//"password":""
+			//}).then(function(data){
+				//console.log(data)
+			//}).catch(function(err){
+				//console.log(err)
+			//})
+			
+			
+			console.log(tools.transform("563.68"))
+			console.log(tools.timeFormat(1619321487923))
+			console.log("是否安卓设备：",tools.isAndroidMobileDevice())
+			console.log("是否ios设备：",tools.isAppleMobileDevice())
+			console.log("是否移动端设备：",tools.isMobileUserAgent())
+			console.log("是否手机号码：",tools.isPhoneNumber("07511-6631286"))
+			//tools.setCookie("gg","123",3)
+			//console.log(tools.getCookie("zzh"))
+			//console.log(tools.delCookie("zzh"))
+			tools.delCookie("gg")
+			
+
+
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>
