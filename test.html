@@ -37,6 +37,21 @@
 			//console.log(tools.delCookie("zzh"))
 			tools.delCookie("gg")
 			
+			
+			let ws = new WebSocket("ws://mycloud.konzesys.com.cn/databank/databank");
+			tools.setWs(ws);
+			tools.ws.onopen = function() {
+			  console.log("打开websocket")
+			}
+			tools.ws.onerror = function(ev) {
+			    	
+			}
+			tools.ws.onclose = function(ev) {
+			    // 关闭 websocket
+			    console.log("连接已关闭...");
+			      
+			}
+			
 
 
 		</script>

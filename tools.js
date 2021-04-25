@@ -273,9 +273,27 @@ function typeOf(para) {
 
 
 export default {
+	
+	ws: {},//websocket对象
+    delay:500,//重连延迟
+    //设置websocket对象方法
+    setWs: function(newWs) {
+        this.ws = newWs
+    },
+    //设置延迟方法
+    setDelay:function(newDelay){
+    	 this.delay = newDelay
+    },
+    //发送websocket信息方法
+    sendMsg:function(message){
+    	this.ws.send(JSON.stringify(message))
+    },
+	
+	
+	
+	
 	typeOf,
 	Ajax,
-	getGet,
 	uniqueId,
 	transform,
 	timeFormat,
